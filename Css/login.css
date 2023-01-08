@@ -1,181 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #d3e6f1, #ecdbf3);
+    background-color: #dee9ff;
 }
 
-
-.container{
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: rgb(238, 222, 222);
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
+.registration-form{
+	padding: 50px 0;
 }
 
-.container .forms{
-    display: flex;
-    align-items: center;
-    height: 440px;
-    width: 200%;
-    transition: height 0.2s ease;
+.registration-form form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
-
-.container .form{
-    width: 50%;
-    padding: 30px;
-    background-color: rgb(235, 221, 221);
-    transition: margin-left 0.18s ease;
+.registration-form .form-icon{
+	text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
 }
 
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
 }
 
-.container .signup{
-    opacity: 0;
-    transition: opacity 0.09s ease;
-}
-.container.active .signup{
-    opacity: 1;
-    transition: opacity 0.2s ease;
-}
-
-.container.active .forms{
-    height: 600px;
-}
-.container .form .title{
-    position: relative;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-.form .title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: #4070f4;
-    border-radius: 25px;
-}
-
-.form .input-field{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.input-field input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0 35px;
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
     border: none;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 2px solid #ccc;
-    border-top: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.input-field input:is(:focus, :valid){
-    border-bottom-color: #4070f4;
-}
-
-.input-field i{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 23px;
-    transition: all 0.2s ease;
-}
-
-.input-field input:is(:focus, :valid) ~ i{
-    color: #4070f4;
-}
-
-.input-field i.icon{
-    left: 0;
-}
-.input-field i.showHidePw{
-    right: 0;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.form .checkbox-text{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: white;
     margin-top: 20px;
 }
 
-.checkbox-text .checkbox-content{
-    display: flex;
-    align-items: center;
-}
-
-.checkbox-content input{
-    margin-right: 10px;
-    accent-color: #4070f4;
-}
-
-.form .text{
-    color: rgb(5, 5, 5);
-    font-size: 14px;
-}
-
-.form a.text{
-    color: #4070f4;
-    text-decoration: none;
-}
-.form a:hover{
-    text-decoration: underline;
-}
-
-.form .button{
-    margin-top: 35px;
-}
-
-.form .button input{
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    background-color: #0bbb4e;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.button input:hover{
-    background-color: #78b643;
-}
-
-.form .login-signup{
-    margin-top: 30px;
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
     text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
 }
- 
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
